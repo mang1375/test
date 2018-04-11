@@ -2,7 +2,7 @@
 <p>Find me in app/views/home/index.html.erb</p>
 
 <div class="container">
-  <h1>글 목록</h1>
+  <h1>목록</h1>
   <% @posts.each do |p| %>
     <h2><%= p.id %>번 글 : <a href="/read/<%= p.id %>"><%= p.title %></a></h2>
     <hr>
