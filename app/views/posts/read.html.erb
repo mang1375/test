@@ -1,0 +1,13 @@
+<h1>Posts#read</h1>
+<p>Find me in app/views/posts/read.html.erb</p>
+
+<div class="container">
+  <h1><%= @post.title %></h1>
+  <hr>
+  <p class="h2"><%= @post.content %></p>
+  <hr>
+ 
+  <a href="/" class="btn btn-primary">목록</a>
+  <a href="/edit/<%= @post.id %>" class="btn btn-primary">수정</a>
+  <a href="/posts/delete/<%= @post.id %>" class="btn btn-primary" data-method="posts" data-confirm="글을 삭제합니다.">삭제</a>
+</div>

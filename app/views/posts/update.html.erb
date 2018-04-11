@@ -1,0 +1,19 @@
+<h1>Posts#update</h1>
+<p>Find me in app/views/posts/update.html.erb</p>
+
+<div class="container">
+  <form action="/posts/update_post/<%= @post.id %>" method="post">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+    <div class="form-group row">
+      <label class="col-2 col-form-label">제목</label>
+      <div class="col-10">
+        <input class="form-control" type="text" name="title" value="<%= @post.title %>">
+      </div>
+    </div>
+    <div class="form-group">
+      <label>내용</label>
+      <textarea class="form-control" name="content" rows="3" ><%= @post.content %></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">작성</button>
+  </form>
+</div>
